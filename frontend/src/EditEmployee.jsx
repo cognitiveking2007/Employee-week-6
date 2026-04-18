@@ -28,7 +28,7 @@ function EditEmployee() {
   const savedModifiedEmp = async (modifiedEmp) => {
     try {
       // 1. Pass 'modifiedEmp' as the body of the PUT request
-      const res = await axios.put(`http://localhost:4000/EmployeeAPI/employees/${state._id}`, modifiedEmp);
+      const res = await axios.put(`https://employee-week-6.onrender.com/EmployeeAPI/employees/${state._id}`, modifiedEmp);
       if (res.status === 200) {
         navigate("/list"); // Fixed casing
       }

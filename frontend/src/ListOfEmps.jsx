@@ -15,7 +15,7 @@ function ListOfEmps() {
        navigate("/edit-emp",{state:empObj});
   }; 
   const deleteEmpByID= async (id)=>{
-    let res = await axios.delete(`http://localhost:4000/EmployeeAPI/employees/${id}`);
+    let res = await axios.delete(`https://employee-week-6.onrender.com/EmployeeAPI/employees/${id}`);
     if (res.status === 200) {
         //get latest emps data
        getEmps();
@@ -23,7 +23,7 @@ function ListOfEmps() {
   };
   //get all emps
   /*async function getEmps() {
-      let res = await axios.get("http://localhost:4000/EmployeeAPI/employees");
+      let res = await axios.get("https://employee-week-6.onrender.com/EmployeeAPI/employees");
       if (res.status === 200) {
         let data = res.data;
 
@@ -32,7 +32,7 @@ function ListOfEmps() {
     }*/
    async function getEmps() {
   try {
-    let res = await axios.get("http://localhost:4000/EmployeeAPI/employees");
+    let res = await axios.get("https://employee-week-6.onrender.com/EmployeeAPI/employees");
     
     // Check if the array is inside a property (common in Express)
     // If your backend sends { payload: [...] }, use res.data.payload
