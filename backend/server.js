@@ -5,10 +5,20 @@ import { EmployeeApp } from './APIs/EmployeeAPI.js';
 import cors from "cors";
 
 const app=exp();
+//app.use(
+  //cors({
+   // origin: ["http://localhost:5174"],
+ // }),
+//);
 app.use(
   cors({
-    origin: ["http://localhost:5174"],
-  }),
+    origin: [
+      "http://localhost:5174",
+      "https://employee-week-6-3seju4efl-cognitiveking2007s-projects.vercel.app"
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+  })
 );
 app.use(exp.json());
 app.use("/EmployeeAPI", EmployeeApp);
