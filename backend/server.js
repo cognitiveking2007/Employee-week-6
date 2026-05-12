@@ -14,6 +14,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5174",
+      "https://employee-week-6.vercel.app",
       "https://employee-week-6-3seju4efl-cognitiveking2007s-projects.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
